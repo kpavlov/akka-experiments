@@ -8,35 +8,51 @@
     <artifactId>akka-experiments</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>Akka Sandbox: Playing with Akka</name>
+
+    <developers>
+        <developer>
+            <id>kpavlov</id>
+            <name>Konstantin Pavlov</name>
+            <url>https://konstantinpavlov.net</url>
+        </developer>
+    </developers>
+
+
     <properties>
         <java.version>1.8</java.version>
-        <akka.version>2.4.4</akka.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!-- Versions -->
+        <akka.http.version>10.0.1</akka.http.version>
+        <akka.version>2.4.16</akka.version>
+        <scala.tools.version>2.12</scala.tools.version>
+        <scala.version>2.12.1</scala.version>
+        <slf4j.version>1.7.22</slf4j.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-slf4j_2.11</artifactId>
+            <artifactId>akka-slf4j_${scala.tools.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http-core_2.11</artifactId>
-            <version>${akka.version}</version>
+            <artifactId>akka-http_${scala.tools.version}</artifactId>
+            <version>${akka.http.version}</version>
         </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http-experimental_2.11</artifactId>
+            <artifactId>akka-stream_${scala.tools.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
         <!-- Test dependencies -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.21</version>
-            <scope>test</scope>
+            <version>${slf4j.version}</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

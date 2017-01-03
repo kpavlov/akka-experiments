@@ -1,4 +1,4 @@
-package hello;
+package com.github.kpavlov.akkabox.transactions;
 
 public enum TransactionStatus {
 
