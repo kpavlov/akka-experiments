@@ -13,6 +13,7 @@ Akka stream is getting data from producer actor which in turn loads data from mo
 When there is nothing in the DB queue - then [SlowService] returns zero. [SlowServiceActor] schedules next service invocation after big delay.
 
 [SlowService] is invoked by [SlowServiceActor] only when there is a demand from stream.
+[SlowServiceActor] is running in separate dispatcher to avoid affecting Akka's `default-dispatcher`.
 
 Trottler slows down a stream to reduce the load.
 
