@@ -16,6 +16,6 @@ When there is nothing in the DB queue - then [SlowService] returns zero. [SlowSe
 
 Trottler slows down a stream to reduce the load.
 
-[ExpensiveProducerApp]: ./blob/master/src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/ExpensiveProducerApp.java
-[SlowService]:  ./blob/master/src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/SlowService.java
-[SlowServiceActor]: /blob/master/src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/SlowServiceActor.java
+[ExpensiveProducerApp]: ./src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/ExpensiveProducerApp.java
+[SlowService]:  ./src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/SlowService.java
+[SlowServiceActor]: ./src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/SlowServiceActor.java
