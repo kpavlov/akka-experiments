@@ -2,9 +2,11 @@
 
 [![Build Status](https://travis-ci.org/kpavlov/akka-experiments.png?branch=master)](https://travis-ci.org/kpavlov/akka-experiments)
 
-## Expensive producer
+## Experiment 1: Transaction Processing
 
-com.github.kpavlov.akkabox.stream.expensiveProducer.ExpensiveProducerApp
+## Experiment 2: [Expensive producer][ExpensiveProducerApp]
+
+Use Case: Batch processing data from a RDBMS queue.
 
 Akka stream is getting data from producer actor which in turn loads data from mock database queue ([SlowService] emulates RDBMS).
 
@@ -14,6 +16,6 @@ When there is nothing in the DB queue - then [SlowService] returns zero. [SlowSe
 
 Trottler slows down a stream to reduce the load.
 
-[ExpensiveProducerApp]: #ExpensiveProducerApp
-[SlowService]: #SlowService
-[SlowServiceActor]: #SlowServiceActor
+[ExpensiveProducerApp]: ./blob/master/src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/ExpensiveProducerApp.java
+[SlowService]:  ./blob/master/src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/SlowService.java
+[SlowServiceActor]: /blob/master/src/main/java/com/github/kpavlov/akkabox/stream/expensiveProducer/SlowServiceActor.java
